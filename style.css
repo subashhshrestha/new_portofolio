@@ -1,0 +1,138 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.landing{
+    background-color: black;
+    color: white;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    font-size: 40px;
+    top: 0;
+    left: 0;
+    z-index: 5;
+    -webkit-transition: top 3s; /* For Safari 3.1 to 6.0 */
+    transition: top 3s;
+}
+
+.start-button{
+    background-color: rgb(180, 56, 118);
+    width: 200px;
+    height: 50px;
+    display: flex;
+    cursor: pointer;
+    justify-content: center;
+    align-items: center;
+    font-size: 20px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    border-radius: 20px;
+    margin-top: 40px;
+    opacity: 0;
+    -webkit-transition: opacity 3s; /* For Safari 3.1 to 6.0 */
+    transition: opacity 3s;
+}
+
+.content{
+    width: 100%;
+    height: 100vh;
+    /* background-color: green; */
+    /* opacity: 0; */
+    /* display: none; */
+    position: absolute;
+    top: 0;
+    left: 0;
+    /* z-index: 1;
+    -webkit-transition: opacity 3s; /* For Safari 3.1 to 6.0 */
+    transition:opacity 3s; 
+}
+.top-image{
+    height:40vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-image: url("img/background.jpg");
+    background-position: center;
+    /* background-attachment: fixed; */
+    /* background-size: cover; */
+    color: white;
+}
+.top-image img{
+  width: 150px;
+  height: 150px;
+  margin-top: 35px;
+  border-radius: 50%;
+}
+
+.top-image .name{
+    line-height: 50px;
+    font-size: 30px;
+}
+
+.container{
+    position:relative;
+    top:-50px;
+    background-color: #FCFCFC;
+    padding: 30px;
+}
+
+.about{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+}
+.about-content{
+    display: flex;
+    width: 100%;
+    margin-top: 50px;
+}
+
+.about-left{
+    flex: 1;
+    padding: 20px;
+    box-sizing: border-box;
+}
+.about-left img{
+    max-width: 100%;
+    max-height: auto;
+    
+}
+
+.about-right{
+    flex: 1;
+    text-align: justify;
+    padding: 10px;
+    
+}
+
+.line{
+    background-color: rgb(58, 58, 58);
+    width: 70px;
+    height: 5px;
+}
+
+.interest{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    margin-top: 50px;
+}
+
+.interest-content{
+    width: 100%;
+    margin-top: 50px;
+    /* display: flex; */
+    /* justify-content: center; */
+}
+
+.row-center{
+    justify-content: center !important;
+}
