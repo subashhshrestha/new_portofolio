@@ -55,6 +55,7 @@ function add(){
 document.getElementById('start-btn').addEventListener("click",function(){
     console.log("click");
     content.style.opacity=1;
+    content.style.display='block';
     landing.style.top="-100vh";
 
 })
