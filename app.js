@@ -1,4 +1,7 @@
-let description = 'My name is Subash Basnet';
+setTimeout(start,2000);
+
+function start(){
+    let description = 'My name is Subash Basnet';
 let landing = document.querySelector(".landing");
 let content = document.querySelector(".content");
 myDescription = document.getElementById('description');
@@ -15,7 +18,7 @@ setTimeout(() => {
     setTimeout(() => clearInterval(myNewInterval), 600)
 
     setTimeout(()=>{
-        description = 'My name is subash shrestha';
+        description = 'My name is Subash Shrestha';
         myVeryNewIntercal = setInterval(add,100);
 
         setTimeout(()=>
@@ -61,3 +64,5 @@ document.getElementById('start-btn').addEventListener("click",function(){
 })
 
 
+
+}
