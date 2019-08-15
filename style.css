@@ -3,9 +3,14 @@
     margin: 0;
     box-sizing: border-box;
 }
-
+#description{
+    z-index: 6;
+}
 .landing{
-    background-color: black;
+    background-image: url("img/langing.jpg");
+    background-position: center top;
+    background-size: cover;
+    background-repeat: no-repeat;
     color: white;
     width: 100vw;
     height: 100vh;
@@ -22,8 +27,19 @@
     transition: top 3s;
 }
 
+.landing::before{
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: black;
+    content: '';
+    height: 100%;
+    width: 100%;
+    opacity: 0.6;
+}
+
 .start-button{
-    background-color: rgb(180, 56, 118);
+    border: 2px solid white;
     width: 200px;
     height: 50px;
     display: flex;
@@ -34,9 +50,15 @@
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     border-radius: 20px;
     margin-top: 40px;
+    z-index: 6;
     opacity: 0;
     -webkit-transition: opacity 3s; /* For Safari 3.1 to 6.0 */
     transition: opacity 3s;
+}
+.start-button:hover{
+    background-color: rgba(0, 0, 0, 0.178);
+    border: none;
+    color: rgba(255, 255, 255, 0.61);
 }
 
 .content{
