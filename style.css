@@ -63,8 +63,6 @@
 
 .content{
     width: 100%;
-    height: 100vh;
-    /* background-color: green; */
     opacity: 0;
     display: none;
     position: absolute;
@@ -74,6 +72,62 @@
     -webkit-transition: opacity 3s; /* For Safari 3.1 to 6.0 */
     transition:opacity 3s; 
 }
+
+.side-nav{
+display: inline-block;
+padding: 10px;
+background-color: rgb(77, 74, 74);
+color: white;
+border-radius: 20px;
+text-align: center;
+position: sticky;
+position: -webkit-sticky;
+top:0; 
+}
+
+.side-nav-text{
+    display: inline-block;
+    padding: 10px 0 10px 0;
+    text-align: center;
+    position: sticky;
+    position: -webkit-sticky;
+    top:0; 
+    margin-left: -4px;
+    }
+
+.nav-item{
+    margin-top: 20px;
+    margin-bottom: 20px;
+    cursor: pointer;
+}
+
+.nav-item:hover{
+color: rgba(255, 255, 255, 0.575) !important;
+}
+
+.nav-item-text{
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+#nav-home{
+    background-color: rgb(77, 74, 74);
+    color: white;
+    border-radius: 0 5px 5px 0;
+}
+#nav-about{
+    background-color: rgb(77, 74, 74);
+    color: white;
+    border-radius: 0 5px 5px 0;
+    visibility: hidden;
+}
+#nav-interest{
+    background-color: rgb(77, 74, 74);
+    color: white;
+    border-radius: 0 5px 5px 0;
+    visibility: hidden;
+}
+
 .top-image{
     height:40vh;
     display: flex;
@@ -81,13 +135,11 @@
     align-items: center;
     background-image: url("img/background.jpg");
     background-position: center;
-    /* background-attachment: fixed; */
-    /* background-size: cover; */
     color: white;
 }
 .top-image img{
-  width: 150px;
-  height: 150px;
+  /* width: 150px; */
+  height: 15vh;
   margin-top: 35px;
   border-radius: 50%;
 }
@@ -99,9 +151,10 @@
 
 .container{
     position:relative;
-    top:-50px;
+    top:-200px;
     background-color: #F1F1F1;
     padding: 30px;
+    box-sizing: border-box;
 }
 
 .about{
@@ -139,6 +192,10 @@
     width: 70px;
     height: 5px;
 }
+.padding{
+    padding-top: 15px;
+    padding-bottom: 15px;
+}
 
 .interest{
     display: flex;
@@ -158,3 +215,43 @@
 .row-center{
     justify-content: center !important;
 }
+
+@media screen and (max-width: 1200px) {
+    .about-right{
+        font-size: 13px;
+    }
+
+    .interest-content p{
+        font-size: 13px;
+    }
+  }
+
+  @media screen and (max-width: 990px) {
+    .about-left{
+        display: none;
+    }
+    .about-right{
+        font-size: 16px;
+    }
+
+    .interest-content p{
+        font-size: 8px;
+    }
+
+    .interest-content h1{
+        font-size: 16px;
+    }
+
+  }
+
+  @media screen and (max-width: 768px) {
+
+    .interest-content p{
+        font-size: 12px;
+    }
+
+    .interest-content h1{
+        font-size: 25px;
+    }
+
+  }
