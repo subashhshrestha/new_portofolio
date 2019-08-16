@@ -92,6 +92,7 @@ $(document).ready(function () {
         let about = $(".about").offset().top;
         let interest = $(".interest").offset().top;
         st = $(this).scrollTop();
+        console.log(Math.floor($(".content").height()),Math.floor(windowsscroll + $(window).height()))
         if (previousScroll < st) {
             console.log("Down Scroll")
 
@@ -106,7 +107,7 @@ $(document).ready(function () {
 
             }
 
-            if (Math.floor($(".content").height()) == Math.floor(windowsscroll + $(window).height())) {
+            if (Math.floor($(".content").height()) == Math.floor(windowsscroll + $(window).height()) || Math.floor($(".content").height())-1 == Math.floor(windowsscroll + $(window).height()) || Math.floor($(".content").height())+1 == Math.floor(windowsscroll + $(window).height())) {
                 $("#nav-home").css({ "visibility": "hidden", "color": "white" });
                 $("#nav-about").css({ "visibility": "hidden", "color": "white" })
                 $("#nav-interest").css({ "visibility": "visible", "color": "rgba(255, 255, 255, 0.575)" })
