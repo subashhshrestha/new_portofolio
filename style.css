@@ -69,8 +69,8 @@
 
 .content {
   width: 100%;
-  opacity: 0;
-  display: none;
+  /* opacity: 0;
+  display: none; */
   position: absolute;
   top: 0;
   left: 0;
@@ -216,11 +216,24 @@
   margin-top: 50px;
 }
 
+.skills{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  margin-top: 50px;
+}
+
 .interest-content {
   width: 100%;
   margin-top: 50px;
   /* display: flex; */
   /* justify-content: center; */
+}
+
+.skills-content{
+  margin-top: 50px;
+  width: 100%;
 }
 
 .row-center {

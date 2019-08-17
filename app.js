@@ -77,7 +77,7 @@ function start() {
 
 $(document).ready(function () {
     let previousScroll = 0;
-
+    let flag = 1;
     $("#nav-home").css({ "color": "white" });
     $("#nav-home").css({ "color": "rgba(255, 255, 255, 0.575)" })
     $("#nav-interest").css({ "color": "white" })
@@ -91,10 +91,11 @@ $(document).ready(function () {
         let topimage = $(".top-image").offset().top;
         let about = $(".about").offset().top;
         let interest = $(".interest").offset().top;
+        let skill = $(".skills").offset().top;
         st = $(this).scrollTop();
-        console.log(Math.floor($(".content").height()),Math.floor(windowsscroll + $(window).height()))
+        // console.log(Math.floor($(".content").height()), Math.floor(windowsscroll + $(window).height()))
         if (previousScroll < st) {
-            console.log("Down Scroll")
+            // console.log("Down Scroll")
 
             if (about - windowsscroll <= 20) {
                 $("#nav-home").css({ "visibility": "hidden", "color": "white" });
@@ -107,15 +108,33 @@ $(document).ready(function () {
 
             }
 
-            if (Math.floor($(".content").height()) == Math.floor(windowsscroll + $(window).height()) || Math.floor($(".content").height())-1 == Math.floor(windowsscroll + $(window).height()) || Math.floor($(".content").height())+1 == Math.floor(windowsscroll + $(window).height())) {
-                $("#nav-home").css({ "visibility": "hidden", "color": "white" });
-                $("#nav-about").css({ "visibility": "hidden", "color": "white" })
-                $("#nav-interest").css({ "visibility": "visible", "color": "rgba(255, 255, 255, 0.575)" })
+            if (skill - windowsscroll <= 100 && flag == 1) {
+                flag = 0;
+                width = 0;
+                let javascript = $("#javascript");
+                let per = setInterval(() => {
+                    width = width + 1;
+                    javascript.css({ "width": `${width}%` });
+                    javascript.html(`${width}%`)
+                    if(width == 70){
+                        clearInterval(per)
+                    }
+                }, 100);
+                
 
-                $("#icon-home").css({ "color": "white" });
-                $("#icon-about").css({ "color": "white" })
-                $("#icon-interest").css({ "color": "rgba(255, 255, 255, 0.575)" })
             }
+
+
+
+            // if (Math.floor($(".content").height()) == Math.floor(windowsscroll + $(window).height()) || Math.floor($(".content").height())-1 == Math.floor(windowsscroll + $(window).height()) || Math.floor($(".content").height())+1 == Math.floor(windowsscroll + $(window).height())) {
+            //     $("#nav-home").css({ "visibility": "hidden", "color": "white" });
+            //     $("#nav-about").css({ "visibility": "hidden", "color": "white" })
+            //     $("#nav-interest").css({ "visibility": "visible", "color": "rgba(255, 255, 255, 0.575)" })
+
+            //     $("#icon-home").css({ "color": "white" });
+            //     $("#icon-about").css({ "color": "white" })
+            //     $("#icon-interest").css({ "color": "rgba(255, 255, 255, 0.575)" })
+            // }
         } else {
             console.log("Top Scroll")
 
